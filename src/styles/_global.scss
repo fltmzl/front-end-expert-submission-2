@@ -1,0 +1,38 @@
+#mainContent:focus {
+  outline: 2px solid $primary;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 1rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+
+  @include md {
+    padding: 1rem 2rem;
+  }
+}
+
+.text-gray {
+  color: #727272;
+}
+
+#mainContent {
+  min-height: 90vh;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.skeleton {
+  animation: blink 1.5s infinite;
+}

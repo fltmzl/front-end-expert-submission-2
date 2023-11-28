@@ -1,0 +1,98 @@
+.restaurant-item {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: $black;
+
+  .restaurant-item__thumbnail {
+    position: relative;
+
+    @include lg {
+      flex: 1;
+    }
+
+    .restaurant-item__img {
+      border-radius: 1rem;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @mixin ratingAndCity {
+      background-color: $black;
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .restaurant-item__rating {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: flex-end;
+      color: $primary;
+      @include ratingAndCity();
+
+      .restaurant-item__rating-icon {
+        width: 20px;
+      }
+    }
+
+    .restaurant-item__city {
+      display: flex;
+      gap: 0.5rem;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: $white;
+      @include ratingAndCity();
+
+      .restaurant-item__city-icon {
+        width: 20px;
+      }
+    }
+  }
+
+  .restaurant-item__body {
+    color: $white-darken;
+    padding: 1.5rem;
+
+    @include lg {
+      flex: 1;
+    }
+
+    .restaurant-item__name {
+      margin-bottom: 0.9rem;
+      color: $primary;
+      font-size: 1.2rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $primary;
+        width: 20%;
+        height: 2px;
+        bottom: -7px;
+        left: 0;
+      }
+
+      @include lg {
+        font-size: 1.8rem;
+      }
+    }
+
+    .restaurant-item__desc {
+      font-size: 0.9rem;
+    }
+
+    .restaurant-item__cta {
+      @include primary-button;
+      @include btn-small;
+      margin-top: 1rem;
+    }
+  }
+}

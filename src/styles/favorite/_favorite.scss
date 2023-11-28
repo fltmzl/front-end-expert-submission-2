@@ -1,0 +1,23 @@
+.favorites {
+  .favorites__title {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+
+    @include lg {
+      font-size: 2rem;
+    }
+  }
+
+  favorite-list {
+    display: grid;
+    gap: 1rem;
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include xl {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

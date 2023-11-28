@@ -1,0 +1,60 @@
+.newsletter {
+  background-color: $primary;
+  padding: 3rem 2rem;
+  margin: 3rem 0 2rem;
+  text-align: center;
+
+  .newsletter__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+
+    @include md {
+      font-size: 2rem;
+    }
+  }
+
+  .newsletter__desc {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .input {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+
+    @include md {
+      flex-direction: row;
+    }
+
+    .input__email {
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.3rem;
+      border: none;
+      background-color: $black;
+      color: $white;
+
+      @include md {
+        min-width: 400px;
+      }
+    }
+
+    .input__submit {
+      padding: 0.8rem 1rem;
+      border-radius: 0.3rem;
+      font-weight: 600;
+      transition: color 100ms;
+      cursor: pointer;
+      border: none;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}
